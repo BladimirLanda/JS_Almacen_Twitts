@@ -18,7 +18,7 @@ function cargarEventos() {
         //JavaScript permite utilizar el simbolo OR (||) para realizar asignaciones en caso de resultados NUll
         
         crearTweet();
-    })
+    });
 }
 
 //Funciones
@@ -54,7 +54,7 @@ function mostrarError(error) {
     mensajeError.classList.add('error');
     mensajeError.textContent = error;
 
-    const principal = formulario.parentElement;
+    const principal = formulario.parentElement; // = div contenedor
     principal.appendChild(mensajeError);
 
     const sumbit = formulario.querySelector('input[type="submit"]');
@@ -87,7 +87,7 @@ function crearTweet() {
 
         elemento.appendChild(btnEliminar);
         lista.appendChild(elemento);
-    })
+    });
 
     sincronizarStorage();
 }
